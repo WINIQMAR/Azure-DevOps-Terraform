@@ -23,9 +23,8 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'vinaykumarnomula Docker Hub'
+        containerRegistry: 'DockerHubCode_WeatherApi'
         repository: 'vinaykumarnomula/WeatherApi_New'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        tags: |
-          $(tag)
+        tags: '$(tag)'
